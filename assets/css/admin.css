@@ -1,0 +1,95 @@
+/* Admin styles for Blitz Dock */
+
+.toplevel_page_blitz-dock #wpcontent {
+    padding-left: 0;
+}
+
+.toplevel_page_blitz-dock #wpbody-content {
+    padding-left: 0;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-wrap {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 32px);
+    margin: 0;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-sidebar {
+    width: 280px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcde;
+    background: #fff;
+    position: sticky;
+    top: 32px;
+    min-height: calc(100vh - 32px);
+}
+
+
+.toplevel_page_blitz-dock .blitz-dock-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-nav a:hover {
+    background: #f0f0f1;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-nav a.active,
+.toplevel_page_blitz-dock .blitz-dock-nav a[aria-current="page"] {
+    font-weight: 600;
+    border-left: 4px solid #2271b1;
+    padding-left: 8px;
+    background: #f0f0f1;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-nav a:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-content h1 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.toplevel_page_blitz-dock .blitz-dock-skip-link:focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #2271b1;
+    padding: 8px 15px;
+    z-index: 100000;
+}
+
+@media screen and (max-width: 782px) {
+    .toplevel_page_blitz-dock .blitz-dock-wrap {
+        flex-direction: column;
+        min-height: calc(100vh - 46px);
+    }
+
+    .toplevel_page_blitz-dock .blitz-dock-sidebar {
+        position: static;
+        min-height: auto;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .toplevel_page_blitz-dock .blitz-dock-content {
+        padding-left: 0;
+    }
+}
